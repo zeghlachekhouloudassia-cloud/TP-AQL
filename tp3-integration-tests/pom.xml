@@ -22,7 +22,7 @@
     </properties>
 
     <dependencies>
-        <!-- JUnit 5 (API et Engine) -->
+     
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -36,7 +36,7 @@
             <scope>test</scope>
         </dependency>
         
-        <!-- Mockito (si vous l'utilisez, mais le TP préfère les Stubs) -->
+        
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
@@ -53,7 +53,7 @@
 
     <build>
         <plugins>
-            <!-- Compiler plugin -->
+        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -65,7 +65,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Surefire plugin pour exécuter les tests JUnit 5 -->
+         
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -77,7 +77,6 @@
                 </configuration>
             </plugin>
 
-            <!-- JaCoCo plugin pour la couverture de code -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -96,7 +95,7 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
-                    <!-- Optionnel : Vérifier un seuil minimum de couverture -->
+                
                     <execution>
                         <id>check</id>
                         <goals>
