@@ -1,0 +1,9 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice3,ProductService,5,26,2,4,1,8,2,3,0,2
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice3,ApiException,5,4,0,0,2,2,1,1,1,1
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice3,Product,16,27,0,0,4,10,4,5,4,5
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice2,Order,19,31,0,0,4,11,4,6,4,6
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice2,OrderController,0,11,0,0,0,4,0,2,0,2
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice2,OrderService,0,36,0,6,0,10,0,5,0,2
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice1,User,0,21,0,0,0,8,0,4,0,4
+TP3 - Tests d'intégration avec Stubs,tp3.Exercice1,UserService,0,11,0,0,0,4,0,2,0,2

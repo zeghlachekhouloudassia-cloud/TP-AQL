@@ -1,0 +1,5 @@
+# Created at 2026-04-07T23:30:46.864
+Boot Manifest-JAR contains absolute paths in classpath 'E:\AQL\tp3-integration-tests\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+
