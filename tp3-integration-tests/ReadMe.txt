@@ -9,11 +9,7 @@ stubbing avec Mockito pour simuler les dépendances externes (base de données,
 API, etc.).
 
 
-CE QU'EST UN TEST D'INTEGRATION
-================================================================================
-- Test unitaire : teste une classe isolement, toutes les dependances sont mockees
-- Test d'integration : teste l'interaction entre plusieurs classes, seules les
-  dependances EXTERNES (API, DB, fichiers) sont mockees
+
 
 Dans ce TP :
   -> Les classes metier (UserService, OrderService, ProductService) sont 
@@ -22,19 +18,7 @@ Dans ce TP :
      ProductApiClient) sont stubbees/mockees
 
 
-LES 3 REGLES DU STUBBING AVEC MOCKITO
-================================================================================
 
-Regle 1 : Un stub retourne toujours la meme valeur
-  -> Quand on stubb une methode, elle retournera la meme valeur a chaque appel
-
-Regle 2 : Le dernier stub ecrase les precedents
-  -> Si on stubb plusieurs fois la meme methode avec les memes parametres,
-     seul le dernier est pris en compte
-
-Regle 3 : Chaine possible pour des comportements sequentiels
-  -> On peut enchainer thenThrow() puis thenReturn() pour avoir un comportement
-     different au premier appel puis aux suivants
 
 
 RESUME DES EXERCICES
@@ -121,30 +105,7 @@ Pour chaque test, on suit la meme structure en 3 etapes :
    - Verifier les appels au stub (verify(...))
 
 
-BONNES PRATIQUES APPLIQUEES
-================================================================================
 
-  -> Tester les vraies classes metier (ne pas les mocker)
-  -> Stubber uniquement les dependances externes
-  -> Verifier les appels importants avec verify()
-  -> Tester les cas nominaux ET les cas d'erreur
-  -> Tester les validations en entree
-  -> Ne pas creer de stubs inutiles (Mockito les detecte)
-
-
-COMMANDES UTILES
-================================================================================
-
-Excuter tous les tests :
-  mvn clean test
-
-Excuter un test specifique :
-  mvn test -Dtest=Exercice1Test
-
-Generer le rapport JaCoCo :
-  mvn jacoco:report
-
-Ouvrir le rapport (Windows) :
   start target/site/jacoco/index.html
 
 
