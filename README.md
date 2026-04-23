@@ -29,7 +29,7 @@ Au lieu de mocker les dépendances, on démarre de vraies instances en Docker :
 ## Partie 3 – Exercice 2 : Projet task-manager (rengreen)
 
 ### Lien GitHub cloné
-```
+
 https://github.com/rengreen/task-manager
 
 ### 2. Analyse des tests existants
