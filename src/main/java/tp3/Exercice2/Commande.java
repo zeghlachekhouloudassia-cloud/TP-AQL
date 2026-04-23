@@ -1,11 +1,11 @@
 package tp3.Exercice2;
-public class Order {
+public class Commande {
     private long id;
     private String productName;
     private int quantity;
     private double price;
     
-    public Order(long id, String productName, int quantity, double price) {
+    public Commande(long id, String productName, int quantity, double price) {
         this.id = id;
         this.productName = productName;
         this.quantity = quantity;

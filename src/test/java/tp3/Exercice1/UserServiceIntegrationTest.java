@@ -15,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * Ce test vérifie l'intégration réelle entre UserService et la base de données.
  */
+
 @Testcontainers
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class UserServiceIntegrationTest {

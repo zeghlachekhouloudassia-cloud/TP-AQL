@@ -48,9 +48,9 @@ class OrderIntegrationTest {
     @Test
     @Order(1)
     void testCreateOrder_ChaineComplete_CommandePersisteeEnBase() throws Exception {
-        Order order = new Order(0L, "Laptop", 2, 999.99);
+        Commande order = new Commande(0L, "Laptop", 2, 999.99);
 
-        Order saved = controller.createOrder(order);
+        Commande saved = controller.createOrder(order);
 
         assertNotNull(saved);
         assertTrue(saved.getId() > 0, "L'ID auto-généré doit être > 0");
@@ -59,7 +59,7 @@ class OrderIntegrationTest {
         assertEquals(999.99,   saved.getPrice(), 0.001);
 
         // Vérification en base directement
-        Order fromDb = dao.findById(saved.getId());
+        Commande fromDb = dao.findById(saved.getId());
         assertNotNull(fromDb);
         assertEquals("Laptop", fromDb.getProductName());
     }
@@ -80,7 +80,7 @@ class OrderIntegrationTest {
     @Test
     @Order(3)
     void testCreateOrder_QuantityNegative_LanceException() {
-        Order bad = new Order(0L, "Product", -1, 10.0);
+        Commande bad = new Commande(0L, "Product", -1, 10.0);
         assertThrows(IllegalArgumentException.class,
             () -> controller.createOrder(bad));
     }
@@ -91,7 +91,7 @@ class OrderIntegrationTest {
     @Test
     @Order(4)
     void testCreateOrder_PriceNegative_LanceException() {
-        Order bad = new Order(0L, "Product", 1, -5.0);
+        Commande bad = new Commande(0L, "Product", 1, -5.0);
         assertThrows(IllegalArgumentException.class,
             () -> controller.createOrder(bad));
     }
@@ -102,9 +102,9 @@ class OrderIntegrationTest {
     @Test
     @Order(5)
     void testCreateOrder_PlusieursCommandes_IDsDistincts() {
-        Order o1 = controller.createOrder(new Order(0L, "Mouse",    1,  25.0));
-        Order o2 = controller.createOrder(new Order(0L, "Keyboard", 1,  75.0));
-        Order o3 = controller.createOrder(new Order(0L, "Monitor",  1, 350.0));
+        Commande o1 = controller.createOrder(new Commande(0L, "Mouse",    1,  25.0));
+        Commande o2 = controller.createOrder(new Commande(0L, "Keyboard", 1,  75.0));
+        Commande o3 = controller.createOrder(new Commande(0L, "Monitor",  1, 350.0));
 
         assertNotEquals(o1.getId(), o2.getId());
         assertNotEquals(o2.getId(), o3.getId());
@@ -116,8 +116,8 @@ class OrderIntegrationTest {
     @Test
     @Order(6)
     void testCreateOrder_PrixTotalCoherent() {
-        Order order = new Order(0L, "Webcam", 3, 49.99);
-        Order saved = controller.createOrder(order);
+        Commande order = new Commande(0L, "Webcam", 3, 49.99);
+        Commande saved = controller.createOrder(order);
 
         assertEquals(3 * 49.99, saved.getTotalPrice(), 0.001);
     }

@@ -9,7 +9,7 @@ public class OrderController {
         this.orderService = orderService;
     }
     
-    public Order createOrder(Order order) {
+    public Commande createOrder(Commande order) {
         return orderService.createOrder(order);
     }
 }

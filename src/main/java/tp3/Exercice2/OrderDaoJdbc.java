@@ -38,7 +38,7 @@ public class OrderDaoJdbc implements OrderDao {
     }
 
     @Override
-    public Order saveOrder(Order order) {
+    public Commande saveOrder(Commande order) {
         String sql = "INSERT INTO orders (product_name, quantity, price) VALUES (?, ?, ?)";
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
@@ -61,14 +61,14 @@ public class OrderDaoJdbc implements OrderDao {
     }
 
     /** Helper de test : retrouve une commande par son ID généré. */
-    public Order findById(long id) throws SQLException {
+    public Commande findById(long id) throws SQLException {
         try (Connection conn = getConnection();
              PreparedStatement ps = conn.prepareStatement(
                  "SELECT id, product_name, quantity, price FROM orders WHERE id = ?")) {
             ps.setLong(1, id);
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {
-                    return new Order(
+                    return new Commande(
                         rs.getLong("id"),
                         rs.getString("product_name"),
                         rs.getInt("quantity"),

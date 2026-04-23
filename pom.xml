@@ -17,6 +17,9 @@
         <mockito.version>5.5.0</mockito.version>
         <testcontainers.version>1.19.3</testcontainers.version>
         <jacoco.version>0.8.11</jacoco.version>
+        
+        <testcontainers.docker.host>tcp://localhost:2375</testcontainers.docker.host>
+
     </properties>
 
     <dependencies>

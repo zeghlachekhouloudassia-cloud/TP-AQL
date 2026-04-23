@@ -6,7 +6,7 @@ public class OrderService {
         this.orderDao = orderDao;
     }
     
-    public Order createOrder(Order order) {
+    public Commande createOrder(Commande order) {
         // Validation
         if (order == null) {
             throw new IllegalArgumentException("Order cannot be null");
