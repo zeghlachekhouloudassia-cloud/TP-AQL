@@ -49,4 +49,4 @@
 ### Exercice 6: FizzBuzz
 - **Branch = Condition ?** NON
 - **Pourquoi :** Plusieurs conditions en cascade. Condition coverage doit tester chaque condition atomique : `n <= 1`, `n % 15 == 0`, `n % 3 == 0`, `n % 5 == 0`.
-
+### REMARQUE:Le dernier TP est dan sune autre branche (dans la brache tp3 et pas la branche main)
